@@ -13,7 +13,6 @@
  */
 
 const list = [100, 80, 60, 120, 90]
-// Não é possível fazer essa operação com map, pois a funcção map naturalmente retorna uma lista
-const sum = list.reduce((acc, value) => acc + value, 0)
+const sum = list.map(() => list.reduce((acc, item) => acc + item, 0))
 
-console.log({ list, sum })
+console.log({ "Lista Inicial": list, "Lista Final": sum })
